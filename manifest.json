@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Manager Pro",
+  "version": "2.0",
+  "description": "Organize, categorize and insert prompts anywhere with ease. Enhanced UI with modern design and improved UX.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "action": {
+    "default_title": "Open Prompt Manager Pro"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
